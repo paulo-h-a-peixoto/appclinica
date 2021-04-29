@@ -21,7 +21,7 @@ export default () => {
     useEffect(()=>{
         const unsubscribe = navigation.addListener('focus', () => {
             navigation.setOptions({
-                headerTitle: `Reservar ${route.params.data.title}`
+                headerTitle: `Agendar com ( Nome do Psicólogo ) ${route.params.data.title}`
             });
             getDisabledDates();
         });
@@ -115,10 +115,10 @@ export default () => {
     return (
         <C.Container>
             <C.Scroller ref={scroll} contentContainerStyle={{paddingBottom: 40}}>
-                <C.CoverImage source={{uri: route.params.data.cover}} resizeMode="cover" />
+            <C.CoverImage source={require('../../assets/avatardemo.png')} resizeMode="cover" />
 
                 {loading &&
-                    <C.LoadingIcon size="large" color="#8863E6" />
+                    <C.LoadingIcon size="large" color="#3795d2" />
                 }
 
                 {!loading &&
@@ -132,7 +132,7 @@ export default () => {
                             months={['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']}
                             previousTitle="Anterior"
                             nextTitle="Próximo"
-                            selectedDayColor="#8863E6"
+                            selectedDayColor="#3795d2"
                             selectedDayTextColor="#FFFFFF"
                             todayBackgroundColor="transparent"
                             todayTextStyle="#000000"
@@ -162,7 +162,7 @@ export default () => {
             </C.Scroller>
             {!loading &&
                 <C.ButtonArea onPress={handleSave}>
-                    <C.ButtonText>Reservar Local</C.ButtonText>
+                    <C.ButtonText>Agendar</C.ButtonText>
                 </C.ButtonArea>
             }
         </C.Container>

@@ -23,7 +23,7 @@ export default () => {
                     });
                     navigation.reset({
                         index: 1,
-                        routes:[{name: 'ChoosePropertyScreen'}]
+                        routes:[{name: 'MainDrawer'}]
                     });
                 } else {
                     alert(result.error);
@@ -46,7 +46,7 @@ export default () => {
 
     return (
         <C.Container>
-            <C.LoadingIcon color="#8863E6" size="large" />
+            <C.LoadingIcon color="#3795d2" size="large" />
         </C.Container>
     );
 }

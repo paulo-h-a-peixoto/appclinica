@@ -43,7 +43,7 @@ export default ({data, refreshFunction}) => {
     const handleRemoveButton = () => {
         Alert.alert(
             'Confirmação',
-            'Tem certeza que deseja cancelar a reserva?',
+            'Tem certeza que deseja cancelar o agendamento?',
             [
                 {text: 'Sim, tenho certeza', onPress: removeReservation},
                 {text: 'Cancelar', onPress: null, style: 'cancel'}
@@ -62,9 +62,9 @@ export default ({data, refreshFunction}) => {
 
     return (
         <Box>
-            <CoverImage source={{uri: data.cover}} resizeMode="cover" />
+            <CoverImage source={require('../assets/avatardemo.png')} resizeMode="cover" />
             <InfoArea>
-                <Title>{data.title}</Title>
+                <Title>( Nome do Psicólogo )</Title>
                 <InfoText>Horário reservado:</InfoText>
                 <DateText>{data.datereserved}</DateText>
             </InfoArea>

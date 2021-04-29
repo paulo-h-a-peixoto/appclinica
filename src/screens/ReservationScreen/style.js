@@ -3,7 +3,7 @@ import styled from 'styled-components/native';
 export default {
     Container: styled.SafeAreaView`
         flex: 1;
-        background-color: #F5F6FA;
+        background-color: #fff;
     `,
     Scroller: styled.ScrollView`
         flex: 1;
@@ -24,7 +24,7 @@ export default {
         margin: 10px 0;
     `,
     ButtonArea: styled.TouchableOpacity`
-        background-color: #8863E6;
+        background-color: #3795d2;
         padding: 12px;
         border-radius: 10px;
         justify-content: center;

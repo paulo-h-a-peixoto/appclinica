@@ -25,13 +25,13 @@ export default () => {
                 headerShown: true,
                 headerTitle: '',
                 headerStyle: {
-                    backgroundColor: '#F5F6FA',
+                    backgroundColor: '#fff',
                     shadowOpacity: 0,
                     elevation: 0
                 }
             }}
         >
-            <Drawer.Screen
+            {/* <Drawer.Screen
                 name="WallScreen"
                 component={WallScreen}
             />
@@ -50,7 +50,7 @@ export default () => {
             <Drawer.Screen
                 name="WarningAddScreen"
                 component={WarningAddScreen}
-            />
+            /> */}
             <Drawer.Screen
                 name="ReservationScreen"
                 component={ReservationScreen}

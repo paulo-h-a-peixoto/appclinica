@@ -16,7 +16,7 @@ export default () => {
 
     useEffect(()=>{
         navigation.setOptions({
-            headerTitle: 'Minhas Reservas'
+            headerTitle: 'Meus Agendamentos'
         });
         getList();
     }, []);
@@ -44,7 +44,7 @@ export default () => {
         <C.Container>
             {!loading && list.length === 0 &&
                 <C.NoListArea>
-                    <C.NoListText>Não há reservas.</C.NoListText>
+                    <C.NoListText>Não há agendamento.</C.NoListText>
                 </C.NoListArea>
             }
             <C.List

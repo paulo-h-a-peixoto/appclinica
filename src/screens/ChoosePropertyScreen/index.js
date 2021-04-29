@@ -33,7 +33,7 @@ export default () => {
     }
 
     const chooseProperty = async (property) => {
-        await AsyncStorage.setItem('property', JSON.stringify(property));
+        await AsyncStorage.setItem('property', JSON.stringify({"id": 87, "name": "APT 860"}));
 
         dispatch({
             type: 'setProperty',

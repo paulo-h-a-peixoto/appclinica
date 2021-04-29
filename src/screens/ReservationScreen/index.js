@@ -16,7 +16,7 @@ export default () => {
 
     useEffect(()=>{
         navigation.setOptions({
-            headerTitle: 'Reservas Disponíveis'
+            headerTitle: 'Psicólogos Disponíveis'
         });
         getReservations();
     }, []);
@@ -37,10 +37,10 @@ export default () => {
         <C.Container>
             <C.Scroller contentContainerStyle={{paddingBottom: 40}}>
                 <C.ButtonArea onPress={()=>navigation.navigate('ReservationMyScreen')}>
-                    <C.ButtonText>Minhas Reservas</C.ButtonText>
+                    <C.ButtonText>Meus Agendamentos</C.ButtonText>
                 </C.ButtonArea>
 
-                <C.Title>Selecione uma Área</C.Title>
+                <C.Title>Selecione um Psicólogo</C.Title>
 
                 {loading &&
                     <C.LoadingIcon size="large" color="#8863E6" />

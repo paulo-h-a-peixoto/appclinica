@@ -17,7 +17,7 @@ const DrawerLogoArea = styled.View`
     border-bottom-color: #EEE;
 `;
 const DrawerLogo = styled.Image`
-    width: 190px;
+    width: 40px;
     height: 40px;
 `;
 const DrawerScroller = styled.ScrollView`
@@ -28,7 +28,7 @@ const ChangeUnitArea = styled.View`
     margin: 10px;
 `;
 const ChangeUnitButton = styled.TouchableOpacity`
-    background-color: #8863E6;
+    background-color: #3795d2;
     padding: 12px;
     justify-content: center;
     align-items: center;
@@ -66,14 +66,14 @@ const MenuSquare = styled.View`
     width: 5px;
     height: 35px;
     margin-right: 20px;
-    background-color: ${props=>props.active ? '#8B63E7' : 'transparent'};
+    background-color: ${props=>props.active ? '#3795d2' : 'transparent'};
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 `;
 const MenuButtonText = styled.Text`
     font-size: 15px;
     margin-left: 10px;
-    color: ${props=>props.active ? '#8B63E7' : '#666E78'};
+    color: ${props=>props.active ? '#3795d2' : '#666E78'};
 `;
 
 export default (props) => {
@@ -85,13 +85,13 @@ export default (props) => {
 
 
     const menus = [
-        {title: 'Mural de Avisos', icon: 'inbox', screen: 'WallScreen'},
-        {title: 'Documentos', icon: 'file-text', screen: 'DocumentScreen'},
-        {title: 'Reservas', icon: 'calendar', screen: 'ReservationScreen'},
-        {title: 'Livro de Ocorrências', icon: 'bug', screen: 'WarningScreen'},
-        {title: 'Achados e Perdidos', icon: 'search', screen: 'FoundAndLostScreen'},
-        {title: 'Boletos', icon: 'wpforms', screen: 'BilletScreen'},
-        {title: 'Perfil', icon: 'user', screen: 'ProfileScreen'}
+        // {title: 'Mural de Avisos', icon: 'inbox', screen: 'WallScreen'},
+        // {title: 'Documentos', icon: 'file-text', screen: 'DocumentScreen'},
+        {title: 'Agendamentos', icon: 'calendar', screen: 'ReservationScreen'}
+        // {title: 'Livro de Ocorrências', icon: 'bug', screen: 'WarningScreen'},
+        // {title: 'Achados e Perdidos', icon: 'search', screen: 'FoundAndLostScreen'},
+        // {title: 'Boletos', icon: 'wpforms', screen: 'BilletScreen'},
+        // {title: 'Perfil', icon: 'user', screen: 'ProfileScreen'}
     ];
 
     const handleChangeUnit = async () => {
@@ -113,7 +113,7 @@ export default (props) => {
     return (
         <DrawerArea>
             <DrawerLogoArea>
-                <DrawerLogo source={require('../assets/homelogo.png')} resizeMode="contain" />
+                <DrawerLogo source={require('../assets/iconeclinica.png')} resizeMode="contain" />
             </DrawerLogoArea>
             <DrawerScroller>
                 {menus.map((item, index)=>(
@@ -124,31 +124,31 @@ export default (props) => {
                         <Icon
                             name={item.icon}
                             size={20}
-                            color={props.state.routes[props.state.index].name === item.screen ? '#8B63E7' : '#666E78'}
+                            color={props.state.routes[props.state.index].name === item.screen ? '#3795d2' : '#666E78'}
                         />
                         <MenuButtonText
                             active={props.state.routes[props.state.index].name === item.screen}
                         >{item.title}</MenuButtonText>
                     </MenuButton>
                 ))}
-                <MenuButton onPress={handleLogoutButton}>
+                {/* <MenuButton onPress={handleLogoutButton}>
                     <MenuSquare></MenuSquare>
-                    <Icon name="toggle-left" size={20} color={'#666E78'} />
+                    <Icon name="toggle-left" size={20} color={'#3795d2'} />
                     <MenuButtonText>Sair</MenuButtonText>
-                </MenuButton>
+                </MenuButton> */}
             </DrawerScroller>
             <ChangeUnitArea>
-                <ChangeUnitButton onPress={handleChangeUnit}>
-                    <ChangeUnitButtonText>Trocar Unidade</ChangeUnitButtonText>
+                <ChangeUnitButton onPress={handleLogoutButton}>
+                    <ChangeUnitButtonText>Sair</ChangeUnitButtonText>
                 </ChangeUnitButton>
             </ChangeUnitArea>
             <FooterArea>
                 <FooterInfo>
-                    <FooterProfile>Olá {context.user.user.name}</FooterProfile>
+                    <FooterProfile>Olá Tiago Assunção</FooterProfile>
                     <FooterUnitText>{context.user.property.name}</FooterUnitText>
                 </FooterInfo>
                 <FooterUnitButton onPress={()=>navigation.navigate('UnitScreen')}>
-                    <Icon name="gear" size={24} color="#666E78" />
+                    <Icon name="gear" size={24} color="#3795d2" />
                 </FooterUnitButton>
             </FooterArea>
         </DrawerArea>
